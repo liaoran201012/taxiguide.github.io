@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 
 export default function PrivacyPage() {
   return (
-    <main style={{ paddingTop: '2rem' }}>
+    <>
+      <Header />
+      <main style={{ paddingTop: '2rem' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 3rem', marginBottom: '3rem' }}>
         <h1>Privacy Policy</h1>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
@@ -59,5 +62,6 @@ export default function PrivacyPage() {
         </section>
       </div>
     </main>
+    </>
   );
 }

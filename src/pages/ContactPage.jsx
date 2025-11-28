@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../components/Header';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -29,7 +30,9 @@ export default function ContactPage() {
   };
 
   return (
-    <main style={{ paddingTop: '2rem' }}>
+    <>
+      <Header />
+      <main style={{ paddingTop: '2rem' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem' }}>
         {/* Header */}
         <section style={{
@@ -239,5 +242,6 @@ export default function ContactPage() {
         </section>
       </div>
     </main>
+    </>
   );
 }

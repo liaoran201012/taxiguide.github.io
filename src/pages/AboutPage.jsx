@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 
 export default function AboutPage() {
   return (
-    <main style={{ paddingTop: '2rem' }}>
+    <>
+      <Header />
+      <main style={{ paddingTop: '2rem' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem' }}>
         {/* Hero */}
         <section style={{
@@ -132,5 +135,6 @@ export default function AboutPage() {
         </section>
       </div>
     </main>
+    </>
   );
 }

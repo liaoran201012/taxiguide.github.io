@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../components/Header';
 
 export default function AffiliatePage() {
   const [formData, setFormData] = useState({
@@ -37,7 +38,9 @@ export default function AffiliatePage() {
   };
 
   return (
-    <main style={{ paddingTop: '2rem' }}>
+    <>
+      <Header />
+      <main style={{ paddingTop: '2rem' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem' }}>
         {/* Header */}
         <section style={{
@@ -366,5 +369,6 @@ export default function AffiliatePage() {
         </section>
       </div>
     </main>
+    </>
   );
 }
