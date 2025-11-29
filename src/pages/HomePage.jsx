@@ -5,7 +5,10 @@ import AppRecommendation from '../components/AppRecommendation';
 import FareEstimator from '../components/FareEstimator';
 import SafetyTips from '../components/SafetyTips';
 import Features from '../components/Features';
+import AdSlot from '../components/AdSlot';
 import { taxiApps } from '../data/taxiApps';
+
+
 
 export default function HomePage() {
   const [selectedRegion, setSelectedRegion] = useState('');
@@ -24,14 +27,25 @@ export default function HomePage() {
     <>
       <Header />
       <main className="container" style={{ marginTop: '1rem' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          <RegionSelector
-            data={taxiApps}
-            selectedRegion={selectedRegion}
-            selectedCountry={selectedCountry}
-            onRegionChange={handleRegionChange}
-            onCountryChange={setSelectedCountry}
-          />
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', gridColumn: '1 / -1' }}>
+          <div className="row-with-ad" style={{ alignItems: 'flex-start' }}>
+            <div style={{ flex: 1 }}>
+              <RegionSelector
+                data={taxiApps}
+                selectedRegion={selectedRegion}
+                selectedCountry={selectedCountry}
+                onRegionChange={handleRegionChange}
+                onCountryChange={setSelectedCountry}
+              />
+            </div>
+            <div className="ad-col">
+              <AdSlot />
+            </div>
+          </div>
+
+
+
+
 
           {currentCountryData ? (
             <>
@@ -116,14 +130,14 @@ export default function HomePage() {
               transition: 'all 0.3s',
               marginRight: '1rem'
             }}
-            onMouseEnter={(e) => {
-              e.target.style.background = 'rgba(255, 255, 255, 0.3)';
-              e.target.style.transform = 'translateY(-2px)';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.background = 'rgba(255, 255, 255, 0.2)';
-              e.target.style.transform = 'translateY(0)';
-            }}
+              onMouseEnter={(e) => {
+                e.target.style.background = 'rgba(255, 255, 255, 0.3)';
+                e.target.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+                e.target.style.transform = 'translateY(0)';
+              }}
             >
               Learn More
             </button>
@@ -139,15 +153,15 @@ export default function HomePage() {
               transition: 'all 0.3s',
               boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)'
             }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-2px)';
-              e.target.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
-            }}
-            onClick={() => window.navigateTo('affiliate')}
+              onMouseEnter={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
+              }}
+              onClick={() => window.navigateTo('affiliate')}
             >
               Become a Partner
             </button>

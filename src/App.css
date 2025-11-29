@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Responsive row for placing an ad to the right of the first block */
+.row-with-ad {
+  display: flex;
+  gap: 1rem;
+}
+
+.row-with-ad .ad-col {
+  width: 320px;
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .row-with-ad {
+    flex-direction: column;
+  }
+  .row-with-ad .ad-col {
+    width: 100%;
+  }
+}

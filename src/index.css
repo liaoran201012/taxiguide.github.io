@@ -164,3 +164,28 @@ input:focus, select:focus {
   background-color: #ffffff;
   box-shadow: 0 0 0 3px var(--primary-light);
 }
+
+/* Ad Layout */
+.row-with-ad {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.ad-col {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .row-with-ad {
+    flex-direction: column;
+  }
+  
+  .ad-col {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
