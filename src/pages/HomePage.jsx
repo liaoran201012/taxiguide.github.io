@@ -38,9 +38,10 @@ export default function HomePage() {
                 onCountryChange={setSelectedCountry}
               />
             </div>
-            <div className="ad-col">
-              <AdSlot />
-            </div>
+
+			{/* <div className="ad-col">
+				  <AdSlot />
+				</div> */}
           </div>
 
 
