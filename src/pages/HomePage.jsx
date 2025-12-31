@@ -27,7 +27,7 @@ export default function HomePage() {
     <>
       <Header />
       <main className="container" style={{ marginTop: '1rem' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', gridColumn: '1 / -1' }}>
+      {/*  <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', gridColumn: '1 / -1' }}>
           <div className="row-with-ad" style={{ alignItems: 'flex-start' }}>
             <div style={{ flex: 1 }}>
               <RegionSelector
@@ -39,10 +39,10 @@ export default function HomePage() {
               />
             </div>
 
-			{/* <div className="ad-col">
+			 <div className="ad-col">
 				  <AdSlot />
-				</div> */}
-          </div>
+				</div> 
+          </div>*/}
 
 
 
