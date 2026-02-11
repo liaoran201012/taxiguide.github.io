@@ -39,9 +39,9 @@ export default function HomePage() {
               />
             </div>
 
-			{/* <div className="ad-col">
+			{ <div className="ad-col">
 				  <AdSlot />
-				</div> */}
+				</div> }
           </div>
 
 
